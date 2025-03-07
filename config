@@ -27,7 +27,10 @@ include /etc/sway/config-vars.d/*
 # package `sway-backgrounds`. Installing this package drops a config file to
 # /etc/sway/config.d/
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
+
+exec swaybg -i ~/Bilder/zzz_wallpapers/1355355.png 
+#anby without burger :(
+
 # configuration:
 #
    output DP-1 resolution 2560x1440 pos 0 0
@@ -37,6 +40,7 @@ include /etc/sway/config-vars.d/*
    workspace 2 output HDMI-A-2
    workspace 4 output HDMI-A-2
    workspace 5 output HDMI-A-2
+   workspace 6 output DP-1
 
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -174,11 +178,13 @@ exec flatpak run io.gitlab.librewolf-community
 #exec flatpak run org.mozilla.Thunderbird
 exec flatpak run com.discordapp.Discord
 exec kitty
+exec steam
 
 assign [class="kitty"] workspace 1
-assign [class="librewolf"] workspace 2
 assign [class="Spotify"] workspace 4
 assign [class="discord"] workspace 5
+assign [class="firefox"] workspace 2
+assign [class="steam"] workspace 6
 
 #
 # Scratchpad:
