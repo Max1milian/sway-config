@@ -175,7 +175,7 @@ exec swaybg -i ~/Bilder/zzz_wallpapers/1355355.png
 #launching windows
 exec flatpak run com.spotify.Client
 exec flatpak run io.gitlab.librewolf-community
-#exec flatpak run org.mozilla.Thunderbird
+exec flatpak run org.mozilla.Thunderbird
 exec flatpak run com.discordapp.Discord
 exec kitty
 exec steam
@@ -185,6 +185,8 @@ assign [class="Spotify"] workspace 4
 assign [class="discord"] workspace 5
 assign [class="firefox"] workspace 2
 assign [class="steam"] workspace 6
+assign [app_id="LibreWolf"] workspace 2
+assign [app_id="org.mozilla.Thunderbird"] workspace 3
 
 #
 # Scratchpad:
