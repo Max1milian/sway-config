@@ -64,7 +64,6 @@ exec swaybg -i ~/Bilder/zzz_wallpapers/1355355.png
 #
     input * {
     xkb_layout "de"
-    xkb_variant "colemak,,typewriter"
     xkb_options "grp:win_space_toggle"
     }
 
