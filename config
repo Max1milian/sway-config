@@ -19,7 +19,7 @@ set $term kitty
 set $menu wmenu-run
 
 include /etc/sway/config-vars.d/*
-include ~/.config/sway/variables
+include ~/.config/sway/wsNames
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -38,6 +38,7 @@ exec swaybg -i ~/Bilder/IMG_1066.jpg
    focus output DP-2
    workspace $ws1 output DP-2
    workspace $ws2 output HDMI-A-2
+   workspace $ws3 output HDMI-A-2
    workspace $ws4 output HDMI-A-2
    workspace $ws5 output HDMI-A-2
    workspace $ws6 output DP-2
