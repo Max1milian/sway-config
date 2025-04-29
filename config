@@ -183,10 +183,10 @@ exec steam
 assign [class="kitty"] workspace $ws1
 assign [class="Spotify"] workspace $ws4
 assign [class="discord"] workspace $ws5
-assign [class="firefox"] workspace $ws2
+assign [class="firefox"] workspace $ws3
 assign [class="steam"] workspace $ws6
-assign [app_id="LibreWolf"] workspace $ws2
-assign [app_id="thunderbird"] workspace $ws3
+assign [app_id="LibreWolf"] workspace $ws3
+assign [app_id="thunderbird"] workspace $ws2
 
 #
 # Scratchpad:
