@@ -19,7 +19,7 @@ set $term kitty
 set $menu wmenu-run
 
 include /etc/sway/config-vars.d/*
-
+include ~/.config/sway/variables
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -28,7 +28,7 @@ include /etc/sway/config-vars.d/*
 # /etc/sway/config.d/
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
-exec swaybg -i ~/Bilder/zzz_wallpapers/1355355.png 
+exec swaybg -i ~/Bilder/IMG_1066.jpg 
 #anby without burger :(
 
 # configuration:
@@ -36,11 +36,11 @@ exec swaybg -i ~/Bilder/zzz_wallpapers/1355355.png
    output DP-2 resolution 2560x1440 pos 0 0
    output HDMI-A-2 resolution 1920x1080 pos 2560 0
    focus output DP-2
-   workspace 1 output DP-2
-   workspace 2 output HDMI-A-2
-   workspace 4 output HDMI-A-2
-   workspace 5 output HDMI-A-2
-   workspace 6 output DP-2
+   workspace $ws1 output DP-2
+   workspace $ws2 output HDMI-A-2
+   workspace $ws4 output HDMI-A-2
+   workspace $ws5 output HDMI-A-2
+   workspace $ws6 output DP-2
 
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -63,7 +63,7 @@ exec swaybg -i ~/Bilder/zzz_wallpapers/1355355.png
 # Example configuration:
 #
     input * {
-    xkb_layout "de"
+    xkb_layout "de",
     xkb_options "grp:win_space_toggle"
     }
 
@@ -122,23 +122,23 @@ exec swaybg -i ~/Bilder/zzz_wallpapers/1355355.png
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
+    bindsym $mod+1 workspace $ws1
+    bindsym $mod+2 workspace $ws2
+    bindsym $mod+3 workspace $ws3
+    bindsym $mod+4 workspace $ws4
+    bindsym $mod+5 workspace $ws5
+    bindsym $mod+6 workspace $ws6
     bindsym $mod+7 workspace number 7
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+1 move container to workspace $ws1
+    bindsym $mod+Shift+2 move container to workspace $ws2
+    bindsym $mod+Shift+3 move container to workspace $ws3
+    bindsym $mod+Shift+4 move container to workspace $ws4
+    bindsym $mod+Shift+5 move container to workspace $ws5
+    bindsym $mod+Shift+6 move container to workspace $ws6
     bindsym $mod+Shift+7 move container to workspace number 7
     bindsym $mod+Shift+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
@@ -172,20 +172,20 @@ exec swaybg -i ~/Bilder/zzz_wallpapers/1355355.png
     bindsym $mod+a focus parent
 
 #launching windows
-exec flatpak run com.spotify.Client
-exec flatpak run io.gitlab.librewolf-community
-exec flatpak run org.mozilla.Thunderbird
-exec flatpak run com.discordapp.Discord
+exec spotify-launcher 
+exec librewolf 
+exec thunderbird 
+exec discord 
 exec kitty
 exec steam
 
-assign [class="kitty"] workspace 1
-assign [class="Spotify"] workspace 4
-assign [class="discord"] workspace 5
-assign [class="firefox"] workspace 2
-assign [class="steam"] workspace 6
-assign [app_id="LibreWolf"] workspace 2
-assign [app_id="org.mozilla.Thunderbird"] workspace 3
+assign [class="kitty"] workspace $ws1
+assign [class="Spotify"] workspace $ws4
+assign [class="discord"] workspace $ws5
+assign [class="firefox"] workspace $ws2
+assign [class="steam"] workspace $ws6
+assign [app_id="LibreWolf"] workspace $ws2
+assign [app_id="thunderbird"] workspace $ws3
 
 #
 # Scratchpad:

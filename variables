@@ -1,0 +1,6 @@
+set $ws1 "1: Terminal"
+set $ws2 "2: Thunderbird"
+set $ws3 "3: LibreWolf"
+set $ws4 "4: Spotify"
+set $ws5 "5: Discord"
+set $ws6 "6: Steam"
