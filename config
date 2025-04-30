@@ -179,6 +179,7 @@ exec thunderbird
 exec discord 
 exec kitty
 exec steam
+exec vlc
 
 assign [class="kitty"] workspace $ws1
 assign [class="Spotify"] workspace $ws4
