@@ -7,7 +7,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -173,22 +173,22 @@ exec swaybg -i ~/Bilder/IMG_1066.jpg
     bindsym $mod+a focus parent
 
 #launching windows
-exec spotify-launcher 
-exec librewolf 
-exec thunderbird 
-exec discord 
 exec kitty
+exec thunderbird 
+exec librewolf 
+exec spotify-launcher 
+exec discord 
 exec steam
 exec vlc
 
 assign [class="kitty"] workspace $ws1
+assign [app_id="thunderbird"] workspace $ws2
+assign [class="firefox"] workspace $ws3
+assign [app_id="librewolf"] workspace $ws3
 assign [class="Spotify"] workspace $ws4
 assign [class="discord"] workspace $ws5
-assign [class="firefox"] workspace $ws3
 assign [class="steam"] workspace $ws6
 assign [class="vlc"] workspace $ws7
-assign [app_id="LibreWolf"] workspace $ws3
-assign [app_id="thunderbird"] workspace $ws2
 
 #
 # Scratchpad:
