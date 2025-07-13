@@ -7,7 +7,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod1
+set $mod Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -20,6 +20,7 @@ set $menu wmenu-run
 
 include /etc/sway/config-vars.d/*
 include ~/.config/sway/wsNames
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -28,22 +29,38 @@ include ~/.config/sway/wsNames
 # /etc/sway/config.d/
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
-exec swaybg -i ~/Bilder/IMG_1066.jpg 
+#exec swaybg -i ~/Bilder/IMG_1066.jpg 
 #anby without burger :(
+exec swaybg -i ~/Bilder/1337881.jpeg -m fill
+
+#new Workspace layout
+#1: LMMS (DP-2)
+#2: Furnance (DP-2)
+#3: Krita (DP-2)
+#4: Blender (DP-2)
+#5: Kitty (DP-2)
+#6: Thunderbird (HDMI-A-2)
+#7: LibreWolf (HDMI-A-2)
+#8: Discord (HDMI-A-2)
+#9: Spotify (HDMI-A-2)
+#10: virt-manager (DP-2)
+
 
 # configuration:
 #
    output DP-2 resolution 2560x1440 pos 0 0
    output HDMI-A-2 resolution 1920x1080 pos 2560 0
    focus output DP-2
-   workspace $ws1 output DP-2
-   workspace $ws2 output HDMI-A-2
-   workspace $ws3 output HDMI-A-2
-   workspace $ws4 output HDMI-A-2
-   workspace $ws5 output HDMI-A-2
-   workspace $ws6 output DP-2
-   workspace $ws7 output HDMI-A-2
 
+   workspace $ws1 output DP-2
+   workspace $ws2 output DP-2
+   workspace $ws3 output DP-2
+   workspace $ws4 output DP-2
+   workspace $ws5 output DP-2
+   workspace $ws6 output HDMI-A-2
+   workspace $ws7 output HDMI-A-2
+   workspace $ws8 output HDMI-A-2
+   workspace $ws9 output HDMI-A-2
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -173,22 +190,26 @@ exec swaybg -i ~/Bilder/IMG_1066.jpg
     bindsym $mod+a focus parent
 
 #launching windows
+exec lmms
+exec furnace
+exec krita
+exec blender
+
 exec kitty
 exec thunderbird 
 exec librewolf 
 exec spotify-launcher 
 exec discord 
-exec steam
-exec vlc
 
-assign [class="kitty"] workspace $ws1
-assign [app_id="thunderbird"] workspace $ws2
-assign [class="firefox"] workspace $ws3
-assign [app_id="librewolf"] workspace $ws3
-assign [class="Spotify"] workspace $ws4
-assign [class="discord"] workspace $ws5
-assign [class="steam"] workspace $ws6
-assign [class="vlc"] workspace $ws7
+assign [app_id="lmms"] workspace $ws1
+assign [class="org.tildearrow.furnace"] workspace $ws2
+assign [class="krita"] workspace $ws3
+assign [app_id="blender"] workspace $ws4
+assign [app_id="kitty"] workspace $ws5
+assign [app_id="thunderbird"] workspace $ws6
+assign [app_id="librewolf"] workspace $ws7
+assign [class="discord"] workspace $ws8
+assign [class="Spotify"] workspace $ws9
 
 #
 # Scratchpad:
