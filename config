@@ -39,17 +39,17 @@ exec swaybg -i ~/Bilder/swayfx_mascot.png -m fill
 #3: Krita (DP-2)
 #4: Blender (DP-2)
 #5: Kitty (DP-2)
-#6: Thunderbird (HDMI-A-2)
-#7: LibreWolf (HDMI-A-2)
-#8: Discord (HDMI-A-2)
-#9: Deezer (HDMI-A-2)
+#6: Thunderbird (HDMI-A-1)
+#7: LibreWolf (HDMI-A-1)
+#8: Discord (HDMI-A-1)
+#9: Deezer (HDMI-A-1)
 #10: virt-manager (DP-2)
 
 
 # configuration:
 #
    output DP-2 resolution 2560x1440 pos 0 0
-   output HDMI-A-2 resolution 1920x1080 pos 2560 0
+   output HDMI-A-1 resolution 1920x1080 pos 2560 0
    focus output DP-2
 
    workspace $ws1 output DP-2
@@ -57,10 +57,10 @@ exec swaybg -i ~/Bilder/swayfx_mascot.png -m fill
    workspace $ws3 output DP-2
    workspace $ws4 output DP-2
    workspace $ws5 output DP-2
-   workspace $ws6 output HDMI-A-2
-   workspace $ws7 output HDMI-A-2
-   workspace $ws8 output HDMI-A-2
-   workspace $ws9 output HDMI-A-2
+   workspace $ws6 output HDMI-A-1
+   workspace $ws7 output HDMI-A-1
+   workspace $ws8 output HDMI-A-1
+   workspace $ws9 output HDMI-A-1
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -222,7 +222,7 @@ assign [class="Deezer"] workspace $ws9
 # locking the screen with swaylock
 #
 
-    bindsym $mod+Shift+s exec swaylock -i ~/Bilder/omao_1.jpeg -s fit
+    bindsym $mod+Shift+s exec swaylock -e -i ~/Bilder/omao_1.jpeg -s fit
 #
 # Resizing containers:
 #
